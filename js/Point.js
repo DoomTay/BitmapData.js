@@ -33,8 +33,8 @@ function Point (x, y) {
 	* @returns {Number} The distance between the first and second points.
 	*/
 	Point.distance = function(pt1, pt2) {
-		var dx = p2.x - p1.x;
-		var dy = p2.y - p1.y;
+		var dx = pt2.x - pt1.x;
+		var dy = pt2.y - pt1.y;
 		return Math.sqrt(dx * dx + dy * dy);
 	}
 	
@@ -56,8 +56,8 @@ function Point (x, y) {
 	*/
 	Point.interpolate = function(pt1, pt2, f) {
 		var pt = new Point();
-		pt.x = p1.x + f * (p2.x - p1.x);
-		pt.y = p1.y + f * (p2.y - p1.y);
+		pt.x = pt1.x + f * (pt2.x - pt1.x);
+		pt.y = pt1.y + f * (pt2.y - pt1.y);
 		return pt;
 	}
 	
